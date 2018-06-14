@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sm-8">
+    <div class="blog-post">
+      {% for article in article_list %}
+      <h2 class="blog-post-title">
+        <a href="/{{ article.id }}/">
+        {{ article.title }}
+        </a>
+      </h2>
+      <p>{{ article.content }}</p>
+      {% endfor %}
+    </div>
+  </div>
+<div>
+{% include "aside.html" %}
+</div>

@@ -10,12 +10,15 @@ class Hashtag(models.Model):
 class Article(models.Model):
     DEVELOPMENT = "dv"
     PERSONAL = "ps"
+    GALLERY = "gr"
     CATEGORY_CHOICES = (
         (DEVELOPMENT, "development"),
         (PERSONAL, "personal"),
+        (GALLERY, "gallery"),
     )
 
     title = models.CharField(max_length=200)
+    sub = models.CharField(max_length=100)
     content = models.TextField()
     category = models.CharField(
         max_length=2,
